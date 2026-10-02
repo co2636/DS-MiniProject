@@ -1,30 +1,46 @@
-# ========================================
-# 운영체제 / 에디터 임시 파일
-# ========================================
-.DS_Store
-Thumbs.db
-.vscode/
-.idea/
-*.swp
-*.swo
-*~
+# 제출 코드: 01/02/03 노트북, README, requirements
+# 원본 실습·자동 백업·보고서 전용 코드 제외 (로컬 파일은 유지)
+/30-ESSHealth-scratch.ipynb
+/src/day2_report_figures.py
+*.backup-*.ipynb
+*.nbconvert.ipynb
+.ipynb_checkpoints/
+.virtual_documents/
 
-# ========================================
-# Python 가상환경
-# 현재 프로젝트에 존재하는 두 가상환경 모두 제외
-# ========================================
-venv/
-.venv/
-DS-MiniProject/
+# 생성 결과·보고서·저장 모델은 전부 로컬에서 재생성
+/output/
+/figures/
+/models/
+/checkpoints/
+/cache/
+*.pkl
+*.pickle
+*.joblib
+*.log
+
+# 대용량 원본 데이터 제외
+/data/
+*.mat
+*.h5
+*.hdf5
+*.zip
+*.tar
+*.tar.gz
+
+# DAY2 재실행에 필요한 작은 입력 3개만 포함 (약 3.3 MB)
+/processed/*
+!/processed/day1_final_features.csv
+!/processed/batch1_summary.csv.gz
+!/processed/batch2_summary.csv.gz
+
+# 가상환경·캐시·빌드
+/venv/
+/.venv/
+/DS-MiniProject/
 env/
 ENV/
-
-# ========================================
-# Python 캐시 / 빌드 / 테스트 산출물
-# ========================================
 __pycache__/
 *.py[cod]
-*$py.class
 .pytest_cache/
 .mypy_cache/
 .ruff_cache/
@@ -34,60 +50,18 @@ build/
 dist/
 *.egg-info/
 
-# ========================================
-# Jupyter 임시 파일
-# 실행 결과가 들어 있는 최종 .ipynb는 추적하고,
-# 체크포인트와 자동 백업본만 제외
-# ========================================
-.ipynb_checkpoints/
-.virtual_documents/
-*.backup-*.ipynb
-*.nbconvert.ipynb
-
-# ========================================
-# 원본 데이터
-# .mat 파일은 수 GB이므로 Git/GitHub에 올리지 않음
-# README에 다운로드 방법과 배치별 파일명을 기록할 것
-# ========================================
-data/
-*.mat
-*.h5
-*.hdf5
-*.zip
-*.tar
-*.tar.gz
-
-# ========================================
-# 전처리 후 자동 생성 데이터
-# 노트북 실행으로 다시 만들 수 있으므로 제외
-# ========================================
-processed/
-
-# ========================================
-# 모델·캐시·로그
-# ========================================
-models/
-checkpoints/
-cache/
-*.pkl
-*.pickle
-*.joblib
-*.log
-
-# ========================================
-# 환경 변수와 비밀정보
-# ========================================
+# OS·IDE·임시·비밀정보
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+tmp/
+temp/
 .env
 .env.*
 !.env.example
 *.pem
 *.key
-
-# ========================================
-# 로컬 임시 산출물
-# 최종 figures/와 output/pdf/는 제출·리뷰용이므로 추적 가능
-# ========================================
-tmp/
-temp/
-
-/output/

@@ -1,0 +1,7 @@
+# Python 3.11, DAY1 EDA + DAY2 모델링 환경
+-r requirements-day2.txt
+seaborn==0.13.2
+scipy==1.17.1
+mat73==0.65
+h5py==3.16.0
+jupyterlab==4.6.4
